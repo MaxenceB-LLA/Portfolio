@@ -1,0 +1,684 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* Barre de navigation verticale */
+.navbar {
+    width: 250px;
+    background: #152233;
+    color: #fff;
+    padding: 20px 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 15px 0;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background: #77aaff;
+}
+
+/* Style du contenu principal */
+.content {
+    margin-left: 245px;
+    padding: 20px;
+    max-width: calc(100% - 265px);
+    margin-right: auto;
+}
+
+.section {
+    padding: 20px 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.section-frame {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1100px;
+    border: 1px solid #eaeaea;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Petite touche décorative optionnelle */
+.section-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #77aaff, #3355ff);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 0; /* Réduit l'espacement interne */
+}
+
+.about-frame {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    border: 1px solid #eaeaea;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-frame::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #77aaff, #3355ff);
+}
+
+.about-image {
+    flex: 0 0 250px; /* Largeur fixe réduite */
+    margin-right: 30px;
+    max-width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    aspect-ratio: 3/4;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.skills-intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #555;
+}
+
+/* Section Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skill-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-icon img {
+    width: 50px; /* Taille uniforme */
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    word-break: keep-all; /* Empêche le retour à la ligne */
+    line-height: 1.2;
+}
+
+/* Styles pour la timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 35px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #77aaff;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3355ff;
+    border: 4px solid #77aaff;
+    z-index: 1;
+}
+
+.timeline-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+}
+
+.timeline h3 {
+    color: #3355ff;
+    margin-bottom: 10px;
+}
+
+.timeline p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.timeline em {
+    color: #666;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+/* Styles pour la grille des expériences */
+.experiences-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Carte d'expérience */
+.experience-item {
+    display: flex;
+    align-items: center; /* Centrage vertical */
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Image à gauche */
+.exp-image {
+    flex: 0 0 250px;
+    height: 250px; /* Hauteur fixe pour alignement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5f5f5; /* Fond si l'image est plus petite */
+    overflow: hidden;
+}
+
+.exp-image img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-right: 1px solid #eee;
+}
+
+/* Contenu à droite */
+.exp-content {
+    flex: 1;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrage vertical du texte */
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.veille-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.veille-card:hover {
+    transform: translateY(-5px);
+}
+
+.veille-header {
+    padding: 20px;
+    background: #f8faff;
+    border-bottom: 2px solid #e0e8ff;
+}
+
+.veille-header h3 {
+    color: #3355ff;
+    margin-bottom: 5px;
+}
+
+.veille-header time {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.veille-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.veille-footer {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.veille-source {
+    color: #152233;
+    font-size: 0.85em;
+}
+
+.veille-link {
+    color: #3355ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.veille-link:hover {
+    color: #77aaff;
+    text-decoration: underline;
+}
+
+.project {
+    background: #fff;
+    padding: 25px;
+    margin: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    border-radius: 12px;
+    border: 2px solid #eaeaea;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: #77aaff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Carrousel */
+.project-carousel {
+    margin-top: 20px;
+}
+
+.carousel-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #77aaff;
+    transform: scale(1.05);
+}
+
+/* Modal */
+.carousel-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling sur iOS */
+}
+
+/* Carte de projet */
+.project {
+    flex: 0 0 350px; /* Largeur fixe */
+    scroll-snap-align: start;
+    height: auto;
+    margin: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: 2px solid #eaeaea;
+    padding: 25px;
+}
+
+.carousel-modal {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    overflow: auto;
+}
+
+.carousel-modal[style*="display: block"] {
+    opacity: 1;
+}
+
+.modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+
+/* Empêche le scroll quand le modal est ouvert */
+body.modal-open {
+    overflow: hidden;
+}
+
+@media (hover: none) {
+    .carousel-modal {
+        -webkit-overflow-scrolling: auto;
+    }
+}
+
+/* Masquer la barre de défilement (optionnel) */
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #77aaff;
+    border-radius: 4px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+    
+footer {
+    background: #152233;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Pour les écrans moyens (tablettes) */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 200px;
+    }
+    
+    .content {
+        margin-left: 220px;
+        max-width: calc(100% - 240px);
+    }
+    
+    .experience-item, 
+    .project {
+        width: 45%;
+    }
+}
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px 0;
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar ul li {
+        margin: 5px 10px;
+    }
+    
+    .content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    .experience-grid,
+    .project-grid {
+        flex-direction: column;
+    }
+    
+    .experience-item,
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .timeline-item {
+        padding: 15px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .about-image {
+        flex: 0 0 auto;
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .about-frame {
+        padding: 20px;
+        margin: 20px 15px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-dot {
+        left: -30px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .project {
+        width: 100%;
+    }
+    
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skill-icon img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .section {
+        padding: 15px 0;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .navbar ul li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .experience-item,
+    .project,
+    .timeline-item {
+        padding: 15px;
+    }
+    
+    footer {
+        padding: 15px 0;
+        font-size: 0.9rem;
+    }
+}
