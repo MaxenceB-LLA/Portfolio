@@ -12,6 +12,7 @@ body {
 }
 
 /* Barre de navigation verticale */
+/* Barre de navigation verticale */
 .navbar {
     width: 250px;
     background: #152233;
@@ -21,14 +22,17 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    transition: all 0.3s ease;
     z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Répartit l'espace entre les éléments */
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1; /* Prend tout l'espace disponible */
 }
 
 .navbar ul li {
@@ -41,11 +45,37 @@ body {
     font-weight: bold;
     display: block;
     padding: 10px 20px;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .navbar ul li a:hover {
     background: #77aaff;
+    transform: translateX(5px);
+}
+
+/* Style des icônes sociales */
+.navbar-social {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.social-icon {
+    width: 48px; /* Taille réduite */
+    height: 48px;
+    transition: transform 0.2s ease;
+    opacity: 0.9;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 1;
 }
 
 /* Style du contenu principal */
